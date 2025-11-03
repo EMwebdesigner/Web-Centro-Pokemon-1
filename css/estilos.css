@@ -15,6 +15,7 @@
     --c-blue100: #8ecae6;
     --c_gray400: #808080;
     --c_gray600: #454141;
+    --c_yellow600: #edbf4b;
 
     --l_maxWidht: 1440px;
     --l_minWidth : 375px ;
@@ -217,70 +218,86 @@ html {scroll-behavior: smooth;
                         gap: 2rem;
                         
 
-.Main {width: 50%;
-        margin-left: 13%;
+    .Main {width: 50%;
+            margin-left: 13%;
 
-    & #main_header {
+        & #main_header {
 
-        & h1 {font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-    }
-
-        & .contenedor_lista {background-color: var(--c_purple400);
-            color: var(--c_white);
-                            text-align: center;
-
-            & h2 {font-size: 0.8rem;
-                  padding: 0.5rem;}
-
-            & .main_lista {background-color: rgba(0, 0, 0, 0.2);
-                           display: flex;
-                           justify-content: space-around;
-                           list-style-type: none;
-
-                & .item_lista{font-size: 0.8rem;
-                              padding: 0.4rem;
-                              width: 20%;}
-            }
-
-/*hover*/   & .item_lista:hover {background-color: var(--c_purple300);
-                                 cursor: pointer;}
+            & h1 {font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
         }
-    }
 
-        
-    & #main_contenido{
+            & .contenedor_lista {background-color: var(--c_purple400);
+                color: var(--c_white);
+                                text-align: center;
 
-        & .articulos {display: flex;
-                      justify-content: space-between;
-                      padding-block: 1rem;
-                      border-bottom: 1.2px solid rgb(196, 192, 192);
-                    
+                & h2 {font-size: 0.8rem;
+                    padding: 0.5rem;}
 
-            & .caja_imagen {width: 35%;
-                            
+                & .main_lista {background-color: rgba(0, 0, 0, 0.2);
+                            display: flex;
+                            justify-content: space-around;
+                            list-style-type: none;
+
+                    & .item_lista{font-size: 0.8rem;
+                                padding: 0.4rem;
+                                width: 20%;}
+                }
+
+    /*hover*/   & .item_lista:hover {background-color: var(--c_purple300);
+                                    cursor: pointer;}
+            }
+        }
+
             
-                & img {display: block;
-                        width: 100%;}
-            }
+        & #main_contenido{
 
-            & div {width: 60%;
+            & .articulos {display: flex;
+                        justify-content: space-between;
+                        padding-block: 1rem;
+                        border-bottom: 1.2px solid rgb(196, 192, 192);
+                        
 
-                & h3 {color: var(--c_red700);}
+                & .caja_imagen {width: 35%;
+                                
+                
+                    & img {display: block;
+                            width: 100%;}
+                }
 
-                & p {font-size: 0.8rem;
-                     margin-top: 1rem;}
+                & div {width: 60%;
 
+                    & h3 {color: var(--c_red700);}
+
+                    & p {font-size: 0.8rem;
+                        margin-top: 1rem;}
+
+                }
             }
         }
+
     }
 
-}
+    .Aside {border: 2px solid var(--c_red700);
+            width: calc(100% - 76% - 2rem);
+            max-height: 1062.5px;
+            overflow: hidden;
 
-.Aside {border: 2px solid var(--c_red700);
-        width: calc(100% - 76% - 2rem);
-        background-image: url(/imagenes/banner_aside.png);}
+            & .banner-mobile{
+
+                & a {width: 100%;
+
+                    & figure {
+
+                        & img{  display: block;
+                                width: 360px;
+                                margin-left: -60px;}
+
+                    }
+                }
+            }
+    }
 
 }
 
@@ -429,6 +446,9 @@ html {scroll-behavior: smooth;
                 
                 & ul {font-size: 0.75rem;
 
+                    & li:hover{color: var(--c_yellow600);
+                                cursor: pointer;}
+
                 }
             }
 
@@ -448,9 +468,20 @@ html {scroll-behavior: smooth;
                       align-items: center;
                       text-align: center;
                       
+                & .contenedor_EMweb{display: flex;
+                                    align-items: center;
+                                    gap: 6px;
+
+                    & span { 
+                        
+                        & a{color: var(--c_white);
+                            font-weight: 500;} 
+                    }
+                                
+                }
                     
-                    & a {color: rgba(255, 255, 255, 0.8);
-                         text-decoration: none;}
+
+                   
         }
     }
 }
@@ -553,6 +584,8 @@ html {scroll-behavior: smooth;
               
                             }
 
+                            & .menu_items:hover > .box_submenu {display: none;}
+
                         }
                     }
 
@@ -631,7 +664,10 @@ html {scroll-behavior: smooth;
                   background: url(https://i.makeagif.com/media/4-16-2023/_qDgKy.gif);
                   background-repeat: no-repeat;
                   background-size: cover;
-                  background-position: center center;}
+                  background-position: center center;
+                
+                & .banner-mobile {display: none;}
+        }
 
     }
 
@@ -800,7 +836,12 @@ html {scroll-behavior: smooth;
                                     & i {width: 18px;}
 
                                 }
+
+                                & .box_submenu {display: none;}
+                                
                             }
+
+                            & .menu_items:hover > .box_submenu {display: none;}
                         }
                     }
                 }
@@ -911,7 +952,11 @@ html {scroll-behavior: smooth;
                   background: url(https://i.makeagif.com/media/7-01-2023/XNiwjq.gif);
                   background-repeat: no-repeat;
                   background-size: cover;
-                  background-position: center center;} 
+                  background-position: center center;
+
+            & .banner-mobile{display: none;}
+                
+        } 
     }
 
 
