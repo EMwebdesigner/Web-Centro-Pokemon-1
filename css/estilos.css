@@ -456,7 +456,7 @@ html {scroll-behavior: smooth;
     }
 
 
-    & .pie_footer{height: 50px;
+    & .pie_footer{height: 60px;
                   background-color: var(--c_red900);
 
         & .contenedor{height: 100%;
@@ -720,12 +720,12 @@ html {scroll-behavior: smooth;
             }
         }
 
-        & .pie_footer {height: 60px;
+        & .pie_footer {padding-block: 2rem;
 
             & .contenedor {width: 96%;
                            margin-inline: auto;
                            flex-direction: column;
-                            padding-block: 0.6rem;}
+                           justify-content: center;}
 
 
         }
@@ -1012,12 +1012,12 @@ html {scroll-behavior: smooth;
             }
         }
 
-        & .pie_footer {height: 60px;
+        & .pie_footer {padding-block: 2rem;
 
             & .contenedor {width: 96%;
                            margin-inline: auto;
                            flex-direction: column;
-                            padding-block: 0.6rem;}
+                            justify-content: center;}
 
         }
      }
